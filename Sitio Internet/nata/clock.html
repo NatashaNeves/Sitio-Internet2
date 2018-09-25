@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal Clock: SVG, CSS, JS</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+                <link rel="stylesheet" href="css/style.css">
+                <link rel="icon" type="image/png" href="img/aba.png">
+                <link rel="manifest" href="/manifest.json">
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+    
+          
+  <div class="uk-position-relative uk-position-z-index z-index-max  uk-height" >
+      <div uk-sticky="animation: ; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light;">
+          <nav class="uk-container " >
+              <div class="uk-align-left  uk-navbar-left uk-visible@m ">
+                  <ul class="uk-navbar-nav">
+                      <li>
+                          <a href="index.html" ><img class="logo_size uk-text-left" src="img/logo.jpg" uk-scroll></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="uk-align-right uk-navbar-right uk-visible@m ">
+                  <ul class="color-nav" uk-grid>
+                      <li><a class="uk-margin-small-top " href="index.html" >Home</a></li>
+                      <li><a class="uk-margin-small-top  " href="#paticipar" uk-scroll>Como participar</a></li>
+                      <li><a class="uk-margin-small-top " href="form.html" >Inscreva-se</a></li>
+                      <li><a class="uk-margin-small-top  " href="calcula.html">Calculadora</a></li>
+                      <li><a class="uk-margin-small-top " href="clock.html" >Relógio</a></li>
+                      <li><a class="uk-margin-small-top " href="quiz_v2.html" >Jogo</a></li>
+                      <li><a class="uk-margin-small-top " href="https://produto.mercadolivre.com.br/MLB-1093629732-canecas-cursos-atletica-carapicuiba-_JM#reco_item_pos=0&reco_backend=machinalis-v2p&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=288afccc-2b95-4655-85f3-32d33b034626"  target="_blank">Loja</a></li>
+ 
+                  </ul>
+              </div>
+              <!-- Mobile-->
+
+
+              <div class="uk-align-left uk-hidden@m " >
+                  <ul class="uk-navbar-nav">
+                      <li>
+                          <a href="index.html" ><img class="logo_size uk-text-left" src="img/logo.jpg"></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="uk-align-right uk-hidden@m">
+                  <ul class="uk-navbar-nav hamburg-nav">
+                      <li class=" uk-navbar-right">
+                          <a type="button" uk-toggle="target: #offcanvas-nav-primary" class="uk-icon-link uk-margin-small-right" uk-icon="menu"></a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+  </div>
+  <div id="offcanvas-nav-primary" uk-offcanvas="mode: slide;  overlay: false; flip: true;">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                  <li><a class=""  href="index.html">Home</a></li>
+                  <li><a class=""  href="#paticipar">Como participar</a></li>
+                  <li><a class=""  href="form.html">Inscreva-se</a></li>
+                  <li><a class=""  href="calcula.html">Calculadora</a></li>
+                  <li><a class=""  href="clock.html">Relógio</a></li>
+                  <li><a class=""  href="quiz_v2.html">Jogo</a></li>
+                 
+                  <li><a class=""  href="https://produto.mercadolivre.com.br/MLB-1093629732-canecas-cursos-atletica-carapicuiba-_JM#reco_item_pos=0&reco_backend=machinalis-v2p&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=288afccc-2b95-4655-85f3-32d33b034626" target="_blank">Loja</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="uk-flex uk-flex-center uk-margin-large-top">
+  <svg class="clock" viewBox="0 0 100 100">
+        <g class="marks">
+            <line class="mark mark-1" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-2" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-3" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-4" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-5" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-6" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-7" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-8" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-9" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-10" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-11" x1="50" y1="5" x2="50" y2="10"></line>
+            <line class="mark mark-12" x1="50" y1="5" x2="50" y2="10"></line>
+        </g>
+
+        <line class="hand hand-hour" x1="50" y1="25" x2="50" y2="50"></line>
+        <line class="hand hand-minute" x1="50" y1="10" x2="50" y2="50"></line>
+        <circle cx="50" cy="50" r="3"></circle>
+
+        <g class="hand hand-second">
+            <line x1="50" y1="10" x2="50" y2="60"></line>
+            <circle cx="50" cy="50" r="1.5"></circle>
+        </g>
+  </svg>
+</div>
+  
+
+    <script  src="js/index.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+
+
+</body>
+
+</html>

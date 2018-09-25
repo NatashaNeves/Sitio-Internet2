@@ -1,0 +1,299 @@
+
+<HEAD>
+    <head>
+        <title>Atlética FATEC Carapicuiba</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/aba.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/aba.png">
+        <link rel="manifest" href="/manifest.json">
+  
+<meta charset="UTF-8">
+
+
+<script language="JavaScript">
+var numQues = 20;
+var numChoi = 3;
+var answers = new Array(20);
+
+answers[0] = "R$ 139,50";
+answers[1] = "30";
+answers[2] = "135";
+answers[3] = "14";
+answers[4] = "5.115";
+answers[5] = "R$ 7.395,00";
+answers[6] = "165km";
+answers[7] = "15";
+answers[8] = "R$ 523,00";
+answers[9] = "R$ 165";
+answers[10] = "600 e 250";
+answers[11] = "189";
+answers[12] = "810";
+answers[13] = "R$ 2.500,00";
+answers[14] = "48";
+answers[15] = "72";
+answers[16] = "128";
+answers[17] = "117 e 27";
+answers[18] = "180 e 165";
+answers[19] = "R$ 4.218,00";
+
+
+function getScore(form) {
+  var score = 0;
+  var error = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+		
+		  
+          break;
+        }
+      }
+    }
+  }
+  
+  
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+</script>
+
+</HEAD>
+
+
+<BODY>
+    <div class="uk-position-relative uk-position-z-index z-index-max  uk-height" >
+        <div uk-sticky="animation: ; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light;">
+            <nav class="uk-container " >
+                <div class="uk-align-left  uk-navbar-left uk-visible@m ">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="index.html" ><img class="logo_size uk-text-left" src="img/logo.jpg" uk-scroll></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-align-right uk-navbar-right uk-visible@m ">
+                    <ul class="color-nav" uk-grid>
+                        <li><a class="uk-margin-small-top " href="index.html" >Home</a></li>
+                        <li><a class="uk-margin-small-top  " href="#paticipar" uk-scroll>Como participar</a></li>
+                        <li><a class="uk-margin-small-top " href="form.html" >Inscreva-se</a></li>
+                        <li><a class="uk-margin-small-top  " href="calcula.html">Calculadora</a></li>
+                        <li><a class="uk-margin-small-top " href="clock.html" >Relógio</a></li>
+                        <li><a class="uk-margin-small-top " href="quiz_v2.html" >Jogo</a></li>
+                        <li><a class="uk-margin-small-top " href="https://produto.mercadolivre.com.br/MLB-1093629732-canecas-cursos-atletica-carapicuiba-_JM#reco_item_pos=0&reco_backend=machinalis-v2p&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=288afccc-2b95-4655-85f3-32d33b034626"  target="_blank">Loja</a></li>
+   
+                    </ul>
+                </div>
+                <!-- Mobile-->
+
+
+                <div class="uk-align-left uk-hidden@m " >
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="index.html" ><img class="logo_size uk-text-left" src="img/logo.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-align-right uk-hidden@m">
+                    <ul class="uk-navbar-nav hamburg-nav">
+                        <li class=" uk-navbar-right">
+                            <a type="button" uk-toggle="target: #offcanvas-nav-primary" class="uk-icon-link uk-margin-small-right" uk-icon="menu"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="offcanvas-nav-primary" uk-offcanvas="mode: slide;  overlay: false; flip: true;">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li><a class=""  href="index.html">Home</a></li>
+                    <li><a class=""  href="#paticipar">Como participar</a></li>
+                    <li><a class=""  href="form.html">Inscreva-se</a></li>
+                    <li><a class=""  href="calcula.html">Calculadora</a></li>
+                    <li><a class=""  href="clock.html">Relógio</a></li>
+                    <li><a class=""  href="quiz_v2.html">Jogo</a></li>
+                   
+                    <li><a class=""  href="https://produto.mercadolivre.com.br/MLB-1093629732-canecas-cursos-atletica-carapicuiba-_JM#reco_item_pos=0&reco_backend=machinalis-v2p&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=288afccc-2b95-4655-85f3-32d33b034626" target="_blank">Loja</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-text-center uk-margin-large-top">  <h3>QUIZ SOBRE FRAÇÕES</h3></div>
+    <div class="uk-flex uk-flex-center uk-margin-large-top">   
+
+      
+<form name="quiz" class="quiz">
+1. A nona parte do que tenho aumentada de R$ 17,00 é igual a R$ 32,50. Quanto possuo ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q1" value="R$128,90">R$128,90</li>
+  <li><input type="radio" name="q1" value="R$139,50">R$139,50</li>
+  <li><input type="radio" name="q1" value="R$89,90">R$89,90</li>
+</ul>
+
+2. Das laranjas de uma caixa foram retirados 4/9, depois 3/5 do resto, e ficaram 24 delas. Quantas eram as laranjas ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q2" value="30">30</li>
+  <li><input type="radio" name="q2" value="40">40</li>
+  <li><input type="radio" name="q2" value="50">50</li>
+</ul>
+
+3. Qual é o número cujos 4/5 equivalem a 108 ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q3" value="141">141</li>
+  <li><input type="radio" name="q3" value="135">135</li>
+  <li><input type="radio" name="q3" value="156">156</li>
+</ul>
+
+4. Distribuíram-se 3 1/2  quilogramas de bombons entre vários meninos. Cada um recebeu 1/4  de quilograma. Quantos eram os meninos ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q4" value="14">14</li>
+  <li><input type="radio" name="q4" value="19">19</li>
+  <li><input type="radio" name="q4" value="15">15</li>
+</ul>
+
+5. Para ladrilhar 2/3 de um pátio empregaram-se 5 456 ladrilhos. Para ladrilhar 5/8 do mesmo pátio, quantos ladrilhos seriam necessários ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q5" value="5.647">5.647</li>
+  <li><input type="radio" name="q5" value="4.675">4.675</li>
+  <li><input type="radio" name="q5" value="5.115">5.115</li>
+</ul>
+
+6. Dona Solange pagou R$ 5.960,00 por 4/7 de um terreno. Quanto pagaria por 4/5 desse terreno?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q6" value="R$8.344,00">R$8.344,00</li>
+  <li><input type="radio" name="q6" value="R$5.345.00">R$5.345.00</li>
+  <li><input type="radio" name="q6" value="R$7.395.00">R$7.395.00</li>
+</ul>
+
+7. Luciano fez uma viagem de 1.210 km, sendo 7/11 de aeroplano; 2/5 do resto, de trem, 3/8 do novo resto, de automóvel e os demais quilômetros, a cavalo.
+   Calcular quantos quilômetros percorreu a cavalo ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q7" value="673km">673km</li>
+  <li><input type="radio" name="q7" value="234km">234km</li>
+  <li><input type="radio" name="q7" value="165km">165km</li>
+</ul>
+
+8. A terça parte de um número adicionado a seus 3/5 é igual a 28. Calcule a metade desse número ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q8" value="15">15</li>
+  <li><input type="radio" name="q8" value="13">13</li>
+  <li><input type="radio" name="q8" value="17">17</li>
+</ul>
+
+9. Carolina tinha R$ 175,00. Gastou 1/7 de 1/5 dessa importância. Quanto sobrou ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q9" value="R$456,00">R$456,00</li>
+  <li><input type="radio" name="q9" value="R$130,00">R$130,00</li>
+  <li><input type="radio" name="q9" value="R$523,00">R$523,00</li>
+</ul>
+
+10. Se eu tivesse apenas 1/5 do que tenho, mais R$ 25,00 eu teria R$ 58,00. Quanto tenho ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q10" value="165">165</li>
+  <li><input type="radio" name="q10" value="133">133</li>
+  <li><input type="radio" name="q10" value="141">141</li>
+</ul>
+
+11. A soma de dois números é 850. Um vale 12/5 do outro. Quais são eles ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q11" value="600 e 250">600 e 250</li>
+  <li><input type="radio" name="q11" value="450 e 400">450 e 400</li>
+  <li><input type="radio" name="q11" value="750 e 100">750 e 100</li>
+</ul>
+12. Se dos 2/3 de um número subtrairmos seus 3/7, ficaremos com 45. Qual é o número?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q12" value="189">189</li>
+  <li><input type="radio" name="q12" value="209">209</li>
+  <li><input type="radio" name="q12" value="167">167</li>
+</ul>
+
+13. A soma de três números é 30. O primeiro corresponde aos 2/3 do segundo e este, aos 3/5 do terceiro. Calcular o produto destes três números.
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q13" value="810">810</li>
+  <li><input type="radio" name="q13" value="315">315</li>
+  <li><input type="radio" name="q13" value="278">278</li>
+</ul>
+
+14. Se 7/8 de um terreno valem R$ 21.000,00, qual é o valor de 5/48 do mesmo terreno?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q14" value="R$2.332,00">R$2.332,00</li>
+  <li><input type="radio" name="q14" value="R$4.678,00">R$4.678,00</li>
+  <li><input type="radio" name="q14" value="R$2.500,00">R$2.500,00</li>
+</ul>
+
+15. Qual é o número que se da metade subtrairmos 8 unidades ficaremos com 1/3 dele mesmo ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q15" value="48">48</li>
+  <li><input type="radio" name="q15" value="72">72</li>
+  <li><input type="radio" name="q15" value="56">56</li>
+</ul>
+16. Da terça parte de um número subtraindo-se 12, fica-se com 1/6 do mesmo número. Que número é esse ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q16" value="83">83</li>
+  <li><input type="radio" name="q16" value="90">90</li>
+  <li><input type="radio" name="q16" value="72">72</li>
+</ul>
+
+17. Qual é o número que retirando 48 unidades de sua metade, encontramos a sua oitava parte ?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q17" value="128">128</li>
+  <li><input type="radio" name="q17" value="362">362</li>
+  <li><input type="radio" name="q17" value="232">232</li>
+</ul>
+
+18. A diferença entre dois números é 90; um é 3/13 do outro. Calcular os números.
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q18" value="117 e 27">117 e 27</li>
+  <li><input type="radio" name="q18" value="373 e 283">373 e 283</li>
+  <li><input type="radio" name="q18" value="870 e 680">870 e 680</li>
+</ul>
+
+19. A soma de dois números é 345; um é 12/11 do outro. Calcule-os.
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q19" value="180 e 165">180 e 165</li>
+  <li><input type="radio" name="q19" value="210 e 135">210 e 135</li>
+  <li><input type="radio" name="q19" value="140 e 205">140 e 205</li>
+</ul>
+
+20. Seu Áureo tendo gasto 4/7 do dinheiro que possuía, ficou com 1/3 dessa quantia mais R$ 164,00. Quanto tinha o velho Áureo?
+<ul style="margin-top: 15px">
+  <li><input type="radio" name="q20" value="R$1.722,00">R$1.722,00</li>
+  <li><input type="radio" name="q20" value="R$6.983,00">R$6.983,00</li>
+  <li><input type="radio" name="q20" value="R$4,218,00">R$4,218,00</li>
+</ul>
+
+
+
+
+<input type="button" value="Ver Pontuação" onClick="getScore(this.form)">
+<input type="reset" value="Limpar Respostas">
+<p> Acertos = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
+Respostas Corretas:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="21" cols="30" disabled>
+</textarea>
+</form>
+
+</div>
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.min.js"></script>
